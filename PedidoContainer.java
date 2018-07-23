@@ -14,6 +14,12 @@ class PedidoContainer {
   public Iterator<Pedido> iterator() {
     return pedidos.iterator();
   }
+  /**
+   * Importa um arquivo CSV para esse container
+   * @param filePath     o caminho para o arquivo csv a ser importado
+   * @param sobrescrever se true, o conteudo desse container será substituido,
+   *  caso false, o conteúdo será acrescido com os dados importados.
+   */
   public void importCSV(String filePath, boolean sobrescrever)
     throws FileNotFoundException, IOException, ParseException{
     FileReader fileReader = new FileReader(filePath);
